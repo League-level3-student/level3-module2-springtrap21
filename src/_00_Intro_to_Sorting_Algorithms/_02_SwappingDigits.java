@@ -1,11 +1,17 @@
 package _00_Intro_to_Sorting_Algorithms;
 
+import java.util.Iterator;
+
 class _02_SwappingDigits {
 
     // 1. Complete the method so that the first two elements of the array are
     //    swapped.
     public static void swapArrayOfTwo(int[] arr) {
-
+    	for (int i = 0; i > arr.length; i++) {
+    	int temp = arr[0];
+        arr[0] = arr[1];
+        arr[1] = temp;
+    	}
     }
 
     // 2. Complete the method so that it sorts the array using a bubble sort.

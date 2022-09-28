@@ -36,6 +36,6 @@ class _02_SwappingDigits {
     			
     		}
     	}
-        return 0;
+    	return arr[arr.length/2];
     }
 }

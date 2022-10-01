@@ -1,5 +1,7 @@
 package _00_Intro_to_Sorting_Algorithms;
 
+import java.util.Random;
+
 import processing.core.PApplet;
 	
 /*
@@ -43,17 +45,22 @@ public class _03_VisualArraySorter extends PApplet {
     int[] glizzy;
     @Override
     public void settings() {
-        
+    	setSize(WIDTH, HEIGHT);
     }
 
     @Override
     public void setup() {
-        
+        glizzy = new int[50];
+        Random rnd = new Random();
+        for(int i = 0; i < glizzy.length; i++) {
+        	glizzy[i] = rnd.nextInt(HEIGHT);
+        }
+        noStroke();
     }
 
     @Override
     public void draw() {
-        
+        background(255, 255, 255);
     }
 
     static public void main(String[] passedArgs) {

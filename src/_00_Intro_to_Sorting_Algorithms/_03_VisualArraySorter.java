@@ -8,7 +8,7 @@ import processing.core.PApplet;
  * Goal: Create a program that sorts each rectangle by height!
  * 
  * 1. Create an array of ints. Do not initialize it.
- * 
+ *
  *In the settings() method:
  * 2. Set the size of your window to at least 500 width 500 height
  * 
@@ -57,13 +57,27 @@ public class _03_VisualArraySorter extends PApplet {
         }
         noStroke();
     }
+    
+    public void monkey() {
+    	
+    }
 
     @Override
     public void draw() {
         background(255, 255, 255);
+        fill(5,20,30);
+        for(int j = 0; j < glizzy.length; j++) {
+        drawRect(j*WIDTH/glizzy.length, HEIGHT, WIDTH/glizzy.length, -glizzy[j]);
+        }
+        stepSort(glizzy);
     }
 
-    static public void main(String[] passedArgs) {
+    private void drawRect(int i, int height2, int j, int k) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	static public void main(String[] passedArgs) {
         PApplet.main(_03_VisualArraySorter.class.getName());
     }
     

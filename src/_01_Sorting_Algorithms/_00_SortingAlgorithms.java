@@ -64,7 +64,7 @@ public class _00_SortingAlgorithms {
         }
         default:
             JOptionPane.showMessageDialog(null, "ERROR: Unknown sorting algorithm " + choice);
-            break;
+            
         }
     }
 }

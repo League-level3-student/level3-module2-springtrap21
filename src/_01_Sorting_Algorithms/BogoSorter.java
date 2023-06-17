@@ -23,7 +23,7 @@ public class BogoSorter extends Sorter {
     	display.updateDisplay();
     	for (int i = 0; i < array.length; i++) {
     		if (array[i] == array[i + 1]) {
-				
+			
 			}
     	}
     }

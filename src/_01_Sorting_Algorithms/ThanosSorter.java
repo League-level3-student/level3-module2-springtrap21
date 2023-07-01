@@ -40,13 +40,15 @@ public class ThanosSorter extends Sorter {
 	 */
 	@Override
 	void sort(int[] arr, SortingVisualizer display) {
-		for (int i = 0; i < arr.length; i++) {
+		for (int i = 0; i < arr.length-1; i++) {
+			
 			if (arr[i] > arr[i + 1]) {
 				tSorter(arr, new Random());
-				return;
+				
 			}
-			
+			display.updateDisplay();
 		}
+		
 	}
 
 	void tSorter(int[] arr, Random rnd) {
@@ -59,5 +61,6 @@ public class ThanosSorter extends Sorter {
 				arr[i] = 0;
 			}
 		}
+		
 	}
 }

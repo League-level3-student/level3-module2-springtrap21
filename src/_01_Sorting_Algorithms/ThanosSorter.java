@@ -41,23 +41,27 @@ public class ThanosSorter extends Sorter {
 	@Override
 	void sort(int[] arr, SortingVisualizer display) {
 		for (int i = 0; i < arr.length-1; i++) {
-			
+			display.updateDisplay();
+			System.out.println(arr[i]);
 			if (arr[i] > arr[i + 1]) {
-				tSorter(arr, new Random());
+				tSorter(arr);
 				
 			}
-			display.updateDisplay();
+			
 		}
 		
 	}
 
-	void tSorter(int[] arr, Random rnd) {
-		if (rnd.nextBoolean()) {
+	void tSorter(int[] arr) {
+		boolean whichHalf = new Random().nextBoolean();
+		if (whichHalf) {
 			for (int i = 0; i < arr.length / 2; i++) {
+				System.out.println(arr[i]);
 				arr[i] = 0;
 			}
 		} else {
 			for (int i = arr.length / 2; i < arr.length; i++) {
+				System.out.println(arr[i]);
 				arr[i] = 0;
 			}
 		}

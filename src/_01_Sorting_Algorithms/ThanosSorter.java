@@ -54,14 +54,14 @@ public class ThanosSorter extends Sorter {
 
 	void tSorter(int[] arr) {
 		boolean whichHalf = new Random().nextBoolean();
-		if (whichHalf) {
+		if (whichHalf == true) {
 			for (int i = 0; i < arr.length / 2; i++) {
-				System.out.println(arr[i]);
 				arr[i] = 0;
 			}
-		} else {
+			
+		}
+		else {
 			for (int i = arr.length / 2; i < arr.length; i++) {
-				System.out.println(arr[i]);
 				arr[i] = 0;
 			}
 		}

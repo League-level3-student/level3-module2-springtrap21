@@ -44,9 +44,11 @@ public class ThanosSorter extends Sorter {
 		boolean sorted = false;
 		do {
 			done = true;
+			sorted = false;
+			System.out.println("");
 			for (int i = 0; i < arr.length-1; i++) {
+				System.out.print(arr[i] + ",");
 				display.updateDisplay();
-				System.out.println(arr[i]);
 				if (!sorted && arr[i + 1] != 0 && arr[i] > arr[i + 1]) {
 					tSorter(arr);
 					sorted = true;
@@ -58,18 +60,22 @@ public class ThanosSorter extends Sorter {
 	}
 
 	void tSorter(int[] arr) {
-		boolean whichHalf = new Random().nextBoolean();
-		if (whichHalf == true) {
-			for (int i = 0; i < arr.length / 2; i++) {
-				arr[i] = 0;
-			}
-			
-		}
-		else {
-			for (int i = arr.length / 2; i < arr.length; i++) {
-				arr[i] = 0;
+		Random rnd = new Random();
+		int count = 0;
+		int index = 0;
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] != 0) {
+				count++;
 			}
 		}
+		count = count/2;
+		do {
+			index = rnd.nextInt(arr.length);
+			if (arr[index] != 0) {
+				arr[index] = 0;
+				count--;
+			}
+		} while (count > 0);
 		
 	}
 }

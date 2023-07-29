@@ -40,15 +40,20 @@ public class ThanosSorter extends Sorter {
 	 */
 	@Override
 	void sort(int[] arr, SortingVisualizer display) {
-		for (int i = 0; i < arr.length-1; i++) {
-			display.updateDisplay();
-			System.out.println(arr[i]);
-			if (arr[i] > arr[i + 1]) {
-				tSorter(arr);
-				
+		boolean done = false;
+		boolean sorted = false;
+		do {
+			done = true;
+			for (int i = 0; i < arr.length-1; i++) {
+				display.updateDisplay();
+				System.out.println(arr[i]);
+				if (!sorted && arr[i + 1] != 0 && arr[i] > arr[i + 1]) {
+					tSorter(arr);
+					sorted = true;
+					done = false;
+				}
 			}
-			
-		}
+		} while (!done);
 		
 	}
 

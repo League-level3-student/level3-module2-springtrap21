@@ -1,5 +1,7 @@
 package _02_Intro_To_Searching_Algorithms;
 
+import java.util.Arrays;
+
 public class _02_BinarySearch {
     /*
      * Binary searches are good for sorted data because it
@@ -15,6 +17,7 @@ public class _02_BinarySearch {
     // 1. Complete the steps in the binarySearch method.
     //    We can assume array is already sorted
     public static int binarySearch(int[] array, int start, int end, int value) {
+    	System.out.println("Using Binary Search to  find: " + value + " in " + Arrays.toString(array));
         // 2. if end is greater than or equal to start, then
         //    do steps 3 - 6.
     		if (end >= start) {
@@ -26,6 +29,7 @@ public class _02_BinarySearch {
             // 4. if the array element at mid is equal to value
             //    then return mid
     			if (mid == value) {
+    				System.out.println(value + " Found  at  index " + mid);
 					return mid;
 				}
             // 5. if the array element at mid is greater than value

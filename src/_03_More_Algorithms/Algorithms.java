@@ -34,4 +34,14 @@ public class Algorithms {
 		}
 		return -1;
 	}
+
+	public static double findTallest(List<Double> peeps) {
+		double max = peeps.get(0);
+		for (int i = 1; i < peeps.size(); i++) {
+			if (max < peeps.get(i)) {
+				max = peeps.get(i);
+			}
+		}
+		return max;
+	}
 }

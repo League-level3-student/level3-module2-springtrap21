@@ -1,5 +1,6 @@
 package _03_More_Algorithms;
 
+import java.util.Iterator;
 import java.util.List;
 
 /*
@@ -40,6 +41,21 @@ public class Algorithms {
 		for (int i = 1; i < peeps.size(); i++) {
 			if (max < peeps.get(i)) {
 				max = peeps.get(i);
+			}
+		}
+		return max;
+	}
+	
+	public static String findLongestWord(List<String> words) {
+		String max = words.get(0);
+		//for (int i = 1; i < words.size(); i++) {
+			//if (max.length() < words.get(i).length()) {
+				//max = words.get(i);
+			//}
+		//}
+		for(String word : words) {
+			if (max.length() < word.length()) {
+				max = word;
 			}
 		}
 		return max;

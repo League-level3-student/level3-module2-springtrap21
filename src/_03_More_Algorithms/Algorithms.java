@@ -60,4 +60,14 @@ public class Algorithms {
 		}
 		return max;
 	}
+	
+	public static String containsSOS(List<String> message2) {
+		String message = "... --- ...";
+		for(String message1 : message2) {
+			if (message.length() == message1.length()) {
+				return message;
+			}
+		}
+		return null;		
+	}
 }

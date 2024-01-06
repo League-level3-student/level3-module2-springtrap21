@@ -61,13 +61,14 @@ public class Algorithms {
 		return max;
 	}
 	
-	public static String containsSOS(List<String> message2) {
+	public static boolean containsSOS(List<String> message1) {
 		String message = "... --- ...";
-		for(String message1 : message2) {
-			if (message.length() == message1.length()) {
-				return message;
+		for (String code : message1) {
+			if (message.equals(code)) {
+				return true;
 			}
 		}
-		return null;		
+		return false;
 	}
 }
+			

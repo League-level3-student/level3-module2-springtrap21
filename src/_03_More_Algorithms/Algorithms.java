@@ -70,5 +70,11 @@ public class Algorithms {
 		}
 		return false;
 	}
+
+	public static Double sortScores(List<Double> results) {
+		
+		return 0.0;
+		
+	}
 }
 			

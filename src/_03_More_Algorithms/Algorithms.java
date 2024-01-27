@@ -1,5 +1,6 @@
 package _03_More_Algorithms;
 
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
@@ -45,22 +46,22 @@ public class Algorithms {
 		}
 		return max;
 	}
-	
+
 	public static String findLongestWord(List<String> words) {
 		String max = words.get(0);
-		//for (int i = 1; i < words.size(); i++) {
-			//if (max.length() < words.get(i).length()) {
-				//max = words.get(i);
-			//}
-		//}
-		for(String word : words) {
+		// for (int i = 1; i < words.size(); i++) {
+		// if (max.length() < words.get(i).length()) {
+		// max = words.get(i);
+		// }
+		// }
+		for (String word : words) {
 			if (max.length() < word.length()) {
 				max = word;
 			}
 		}
 		return max;
 	}
-	
+
 	public static boolean containsSOS(List<String> message1) {
 		String message = "... --- ...";
 		for (String code : message1) {
@@ -71,10 +72,16 @@ public class Algorithms {
 		return false;
 	}
 
-	public static Double sortScores(List<Double> results) {
-		
-		return 0.0;
-		
+	public static Double sortScores(List<Double> results, int index) {
+		for (int k = 0; k < results.size(); k++) {
+			for (int i = 0; i < results.size() -1 ; i++) {
+				if (results.get(i) > results.get(i + 1)) {
+					Double temp = results.get(i);
+					results.set(i, results.get(i + 1));
+					results.set(i + 1, temp);
+				}
+			}
+		}
+		return results.get(index);
 	}
 }
-			

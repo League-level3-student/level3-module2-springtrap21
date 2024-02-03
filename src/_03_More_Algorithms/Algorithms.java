@@ -84,4 +84,17 @@ public class Algorithms {
 		}
 		return results.get(index);
 	}
+
+	public static Object sortDNA(List<String> unsortedSequences) {
+		for (int i = 0; i < unsortedSequences.size(); i++) {
+			for (int k = 0; k < unsortedSequences.size() -1; i++) {				
+				if (unsortedSequences.get(k).length() > unsortedSequences.get(k+1).length()) {
+					
+				}
+			}
+		}
+		return null;
+	}
+	
+	
 }

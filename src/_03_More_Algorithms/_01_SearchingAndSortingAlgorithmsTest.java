@@ -84,6 +84,7 @@ public class _01_SearchingAndSortingAlgorithmsTest {
         List<String> sortedSequences = Arrays.asList(new String[] { "ACTGT", "TATGTGT", "CATCGTACATGC",
                 "GCTGATCGTGACTGTAC", "ATAGCTGATCGTAGCTACGTACGATCG" });
         assertEquals(sortedSequences, Algorithms.sortDNA(unsortedSequences));
+        //assertEquals(1,1);
     }
 
 	// 9. Sort the words in alphabetical order. Your teacher may need to

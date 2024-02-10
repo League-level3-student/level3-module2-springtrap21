@@ -85,15 +85,17 @@ public class Algorithms {
 		return results.get(index);
 	}
 
-	public static Object sortDNA(List<String> unsortedSequences) {
+	public static List<String> sortDNA(List<String> unsortedSequences) {
 		for (int i = 0; i < unsortedSequences.size(); i++) {
-			for (int k = 0; k < unsortedSequences.size() -1; i++) {				
+			for (int k = 0; k < unsortedSequences.size() -1; k++) {				
 				if (unsortedSequences.get(k).length() > unsortedSequences.get(k+1).length()) {
-					
+					int temp = unsortedSequences.get(k).length();
+					unsortedSequences.set(k, unsortedSequences.get(k + 1));
+					temp = unsortedSequences.get(k+1).length();
 				}
 			}
 		}
-		return null;
+		return unsortedSequences;
 	}
 	
 	

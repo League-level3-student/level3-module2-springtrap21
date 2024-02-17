@@ -73,12 +73,12 @@ public class Algorithms {
 	}
 
 	public static Double sortScores(List<Double> results, int index) {
-		for (int k = 0; k < results.size(); k++) {
-			for (int i = 0; i < results.size() -1 ; i++) {
-				if (results.get(i) > results.get(i + 1)) {
-					Double temp = results.get(i);
-					results.set(i, results.get(i + 1));
-					results.set(i + 1, temp);
+		for (int i = 0; i < results.size(); i++) {
+			for (int k = 0; k < results.size() -1 ; k++) {
+				if (results.get(k) > results.get(k + 1)) {
+					Double temp = results.get(k);
+					results.set(k, results.get(k + 1));
+					results.set(k + 1, temp);
 				}
 			}
 		}
@@ -87,16 +87,15 @@ public class Algorithms {
 
 	public static List<String> sortDNA(List<String> unsortedSequences) {
 		for (int i = 0; i < unsortedSequences.size(); i++) {
-			for (int k = 0; k < unsortedSequences.size() -1; k++) {				
-				if (unsortedSequences.get(k).length() > unsortedSequences.get(k+1).length()) {
-					int temp = unsortedSequences.get(k).length();
-					unsortedSequences.set(k, unsortedSequences.get(k + 1));
-					temp = unsortedSequences.get(k+1).length();
+			for (int k = 0; k < unsortedSequences.size() -1; k++) {	
+				String temp = unsortedSequences.get(k);
+				String temp1 = unsortedSequences.get(k+1);
+				if (temp.length() > temp1.length()) {
+					unsortedSequences.set(k, temp1);
+					unsortedSequences.set(k + 1, temp);
 				}
 			}
 		}
 		return unsortedSequences;
 	}
-	
-	
 }

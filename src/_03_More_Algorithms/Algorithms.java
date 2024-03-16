@@ -74,7 +74,7 @@ public class Algorithms {
 
 	public static Double sortScores(List<Double> results, int index) {
 		for (int i = 0; i < results.size(); i++) {
-			for (int k = 0; k < results.size() -1 ; k++) {
+			for (int k = 0; k < results.size() - 1; k++) {
 				if (results.get(k) > results.get(k + 1)) {
 					Double temp = results.get(k);
 					results.set(k, results.get(k + 1));
@@ -87,9 +87,9 @@ public class Algorithms {
 
 	public static List<String> sortDNA(List<String> unsortedSequences) {
 		for (int i = 0; i < unsortedSequences.size(); i++) {
-			for (int k = 0; k < unsortedSequences.size() -1; k++) {	
+			for (int k = 0; k < unsortedSequences.size() - 1; k++) {
 				String temp = unsortedSequences.get(k);
-				String temp1 = unsortedSequences.get(k+1);
+				String temp1 = unsortedSequences.get(k + 1);
 				if (temp.length() > temp1.length()) {
 					unsortedSequences.set(k, temp1);
 					unsortedSequences.set(k + 1, temp);
@@ -97,5 +97,20 @@ public class Algorithms {
 			}
 		}
 		return unsortedSequences;
+	}
+
+	public static List<String> sortWords(List<String> words) {
+		for (int i = 0; i < words.size(); i++) {
+			for (int k = 0; k < words.size() - 1; k++) {
+				String temp = words.get(k);
+				String temp1 = words.get(k + 1);
+				if (temp.compareTo(temp1) == 1) {
+					words.set(k, temp1);
+					words.set(k + 1, temp);
+				}
+			}
+		}
+
+		return words;
 	}
 }

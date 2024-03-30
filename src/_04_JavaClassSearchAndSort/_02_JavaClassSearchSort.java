@@ -21,14 +21,11 @@ public class _02_JavaClassSearchSort {
         return list;
     }
 
-    public static Boolean arraySearch(char[] arr, char key) {
-    	//public int compare(String str1, String str2) {
-          //  String lastLetter1 = str1.charAt(str1.length()-1) + "";
-          //  String lastLetter2 = str2.charAt(str2.length()-1) + "";
-            
-          //  return lastLetter1.compareTo(lastLetter2);
-      //  }
-        return true;
+    public static boolean arraySearch(char[] arr, char key) {
+    	Arrays.sort(arr);
+    	int index = Arrays.binarySearch(arr, key);
+    	//need if statements with index >= 0 and  index < 0 return true return false etc
+		return false;   	
     }
     
     public static Boolean listSearch(List<Character> list, Character key) {

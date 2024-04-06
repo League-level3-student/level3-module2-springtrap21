@@ -24,12 +24,24 @@ public class _02_JavaClassSearchSort {
     public static boolean arraySearch(char[] arr, char key) {
     	Arrays.sort(arr);
     	int index = Arrays.binarySearch(arr, key);
-    	//need if statements with index >= 0 and  index < 0 return true return false etc
-		return false;   	
+    	if (index >= 0) {
+			return true;
+		}
+    	if (index <= 0) {
+    		return false;
+		}
+		return false;		   	
     }
     
     public static Boolean listSearch(List<Character> list, Character key) {
-        
+        Collections.sort(list);
+        int index = Collections.binarySearch(list, key);
+        if (index >= 0) {
+			return true;
+		}
+        if (index <= 0) {
+			return false;
+		}
         return null;
     }
 }
